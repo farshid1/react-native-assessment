@@ -7,6 +7,7 @@ export const EmailInput: FC<InputProps> = ({
   ...props
 }) => (
   <Input
+    autoCapitalize="none"
     placeholder={placeholder}
     textContentType="emailAddress"
     keyboardType="email-address"
