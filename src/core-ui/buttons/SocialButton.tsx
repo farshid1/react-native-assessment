@@ -19,8 +19,8 @@ export const SocialButton: FC<SocialButtonProps> = ({
     {...touchableOpacityProps}>
     <View style={[FlexStyles.flexDirectionRow, FlexStyles.alignItemsCenter]}>
       <Image
-        source={leftIcon}
         resizeMode="contain"
+        source={leftIcon}
         style={[
           {
             width: scale(iconSize),
@@ -36,10 +36,10 @@ export const SocialButton: FC<SocialButtonProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    padding: scale(10),
-    borderWidth: scale(1),
     borderColor: Colors.darkSlateGray,
     borderRadius: scale(40),
+    borderWidth: scale(1),
+    padding: scale(10),
     width: scale(225),
   },
   image: {

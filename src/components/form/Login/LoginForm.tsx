@@ -54,40 +54,40 @@ export const LoginForm: FC<LoginFormProps> = memo(
                 styles.inputContainer,
               ]}>
               <EmailInput
-                accessible
                 accessibilityLabel="Email input"
+                accessible
                 containerStyle={styles.inputWidth}
                 onChangeText={onEmailChangeText}
                 value={email}
               />
               <PasswordInput
-                accessible
                 accessibilityLabel="Password input"
+                accessible
                 containerStyle={styles.inputWidth}
-                value={password}
                 onChangeText={onPasswordChangeText}
+                value={password}
               />
             </View>
 
             <View style={[FlexStyles.alignItemsCenter, styles.btnContainer]}>
               <SocialButton
                 accessibilityLabel="Sign up with Apple"
-                title="Sign up with Apple"
                 leftIcon={Images.appleLogo}
                 onPress={onAppleSignUp}
+                title="Sign up with Apple"
               />
               <Spacer />
               <SocialButton
                 accessibilityLabel="Sign up with Facebook"
-                title="Sign up with Facebook"
                 leftIcon={Images.facebookLogo}
                 onPress={onFacebookSignUp}
+                title="Sign up with Facebook"
               />
             </View>
 
             <SmallText
-              accessible
               accessibilityLabel="Disclaimer"
+              accessible
               style={[
                 TextStyles.muted,
                 TextStyles.textAlignCenter,
@@ -95,10 +95,10 @@ export const LoginForm: FC<LoginFormProps> = memo(
               ]}>
               By creating an account, you are indicating that you agree to the{' '}
               <SmallText
-                accessible
                 accessibilityLabel="Terms of Use"
-                style={[TextStyles.underline, TextStyles.muted]}
-                onPress={onTermsOfUsePress}>
+                accessible
+                onPress={onTermsOfUsePress}
+                style={[TextStyles.underline, TextStyles.muted]}>
                 Terms of Use
               </SmallText>{' '}
               and that you are over the age of 13.
@@ -115,16 +115,16 @@ export const LoginForm: FC<LoginFormProps> = memo(
             },
           ]}>
           <RoundedButton
-            title="Next"
-            style={styles.nextBtn}
             accessibilityLabel="Next"
             disabled={nextButtonDisabled}
             onPress={onNextPress}
+            style={styles.nextBtn}
+            title="Next"
           />
 
           <UnderlineText
-            accessible
             accessibilityLabel="Cancel"
+            accessible
             onPress={onCancelPress}
             style={[TextStyles.muted, TextStyles.textAlignCenter]}>
             Cancel
@@ -136,32 +136,25 @@ export const LoginForm: FC<LoginFormProps> = memo(
 );
 
 const styles = StyleSheet.create({
-  btnContainer: {marginTop: verticalScale(50), marginBottom: verticalScale(40)},
+  btnContainer: {marginBottom: verticalScale(40), marginTop: verticalScale(50)},
+  footerContainer: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    bottom: verticalScale(40),
+    height: verticalScale(80),
+    paddingVertical: scale(6),
+    position: 'absolute',
+    width: viewportWidth,
+  },
+  innerContainer: {marginTop: verticalScale(130)},
   inputContainer: {
     height: scale(85),
   },
-  innerContainer: {marginTop: verticalScale(130)},
-  scrollView: {
-    flexGrow: 1,
-    justifyContent: 'center',
-  },
-  termsOfUse: {
-    width: viewportWidth * 0.85,
-  },
-  footerContainer: {
-    position: 'absolute',
-    bottom: verticalScale(40),
-    height: verticalScale(80),
-    backgroundColor: 'white',
-    width: viewportWidth,
-    paddingVertical: scale(6),
-    alignItems: 'center',
-  },
   inputWidth: {width: viewportWidth * 0.85},
   nextBtn: {
-    height: scale(50),
     borderRadius: scale(30),
-    width: viewportWidth * 0.6,
+    elevation: 20,
+    height: scale(50),
     shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
@@ -169,6 +162,13 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 9,
-    elevation: 20,
+    width: viewportWidth * 0.6,
+  },
+  scrollView: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  termsOfUse: {
+    width: viewportWidth * 0.85,
   },
 });

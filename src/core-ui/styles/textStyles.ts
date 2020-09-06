@@ -39,13 +39,13 @@ export const textAlignCenter: TextStyle = {
 };
 
 export const TextStyles = StyleSheet.create({
-  textAlignCenter,
+  bold,
+  darkSlateGray,
+  large,
+  muted,
   normal,
   small,
-  large,
+  textAlignCenter,
   underline,
-  bold,
-  muted,
-  darkSlateGray,
   white,
 });

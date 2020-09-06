@@ -55,16 +55,16 @@ export const LoginScreen: FC = () => {
   return (
     <LoginForm
       {...{email, password}}
-      onEmailChangeText={setEmail}
-      onPasswordChangeText={setPassword}
       animatedPaddingValue={paddingBottomAnim}
       onAppleSignUp={noop}
-      onFacebookSignUp={noop}
       onCancelPress={() => {
         setEmail('');
         setPassword('');
       }}
+      onEmailChangeText={setEmail}
+      onFacebookSignUp={noop}
       onNextPress={noop}
+      onPasswordChangeText={setPassword}
       onTermsOfUsePress={noop}
     />
   );

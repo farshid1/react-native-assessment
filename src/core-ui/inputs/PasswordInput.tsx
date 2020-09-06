@@ -8,9 +8,9 @@ export const PasswordInput: FC<InputProps> = ({
 }) => (
   <Input
     autoCapitalize="none"
-    textContentType="password"
-    secureTextEntry
     placeholder={placeholder}
+    secureTextEntry
+    textContentType="password"
     {...props}
   />
 );

@@ -27,10 +27,10 @@ export const flexCenter: FlexStyle = {
 };
 
 export const FlexStyles = StyleSheet.create({
-  flexContainer,
-  justifyContentCenter,
-  justifyContentSpaceBetween,
   alignItemsCenter,
   flexCenter,
+  flexContainer,
   flexDirectionRow,
+  justifyContentCenter,
+  justifyContentSpaceBetween,
 });

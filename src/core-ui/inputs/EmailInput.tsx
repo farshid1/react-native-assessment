@@ -8,9 +8,9 @@ export const EmailInput: FC<InputProps> = ({
 }) => (
   <Input
     autoCapitalize="none"
+    keyboardType="email-address"
     placeholder={placeholder}
     textContentType="emailAddress"
-    keyboardType="email-address"
     {...props}
   />
 );
