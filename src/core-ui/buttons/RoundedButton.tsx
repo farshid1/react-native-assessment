@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
-import {Text, TouchableOpacity, TouchableOpacityProps} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {FlexStyles, TextStyles} from '../styles';
 import {Colors} from '@app/themes';
+import {RoundedButtonProps} from './type';
 
-export const RoundedButton: FC<TouchableOpacityProps & {title: string}> = ({
+export const RoundedButton: FC<RoundedButtonProps> = ({
   title,
   disabled,
   style,
