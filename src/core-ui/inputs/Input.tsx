@@ -21,7 +21,7 @@ export const Input: FC<InputProps> = ({
 const styles = StyleSheet.create({
   container: {
     borderBottomWidth: scale(1),
-    padding: scale(10),
+    padding: scale(16),
     borderColor: Colors.lightGray,
   },
   textInput: {
