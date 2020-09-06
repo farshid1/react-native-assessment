@@ -1,8 +1,13 @@
 import React, {FC} from 'react';
-import {TextInputProps, TextInput} from 'react-native';
+import {Input} from './Input';
+import {InputProps} from './type';
 
-export const EmailInput: FC<TextInputProps> = (props) => (
-  <TextInput
+export const EmailInput: FC<InputProps> = ({
+  placeholder = 'Email',
+  ...props
+}) => (
+  <Input
+    placeholder={placeholder}
     textContentType="emailAddress"
     keyboardType="email-address"
     {...props}

@@ -1,6 +1,15 @@
 import React, {FC} from 'react';
-import {TextInput, TextInputProps} from 'react-native';
+import {Input} from './Input';
+import {InputProps} from './type';
 
-export const PasswordInput: FC<TextInputProps> = (props) => (
-  <TextInput textContentType="password" secureTextEntry {...props} />
+export const PasswordInput: FC<InputProps> = ({
+  placeholder = 'Password',
+  ...props
+}) => (
+  <Input
+    textContentType="password"
+    secureTextEntry
+    placeholder={placeholder}
+    {...props}
+  />
 );
