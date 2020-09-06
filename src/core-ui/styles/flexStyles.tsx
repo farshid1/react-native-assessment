@@ -4,8 +4,16 @@ export const flexContainer: FlexStyle = {
   flex: 1,
 };
 
+export const flexDirectionRow: FlexStyle = {
+  flexDirection: 'row',
+};
+
 export const justifyContentCenter: FlexStyle = {
   justifyContent: 'center',
+};
+
+export const justifyContentSpaceBetween: FlexStyle = {
+  justifyContent: 'space-between',
 };
 
 export const alignItemsCenter: FlexStyle = {
@@ -21,6 +29,8 @@ export const flexCenter: FlexStyle = {
 export const FlexStyles = StyleSheet.create({
   flexContainer,
   justifyContentCenter,
+  justifyContentSpaceBetween,
   alignItemsCenter,
   flexCenter,
+  flexDirectionRow,
 });
