@@ -11,6 +11,7 @@ module.exports = {
           '@app/core-ui': './src/core-ui',
           '@app/components': './src/components',
           '@app/screens': './src/screens',
+          '@app/themes': './src/themes',
         },
       },
     ],
