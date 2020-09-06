@@ -38,7 +38,7 @@ export const LoginScreen: FC = () => {
     () =>
       Animated.timing(paddingBottomAnim, {
         toValue: 0,
-        duration: 10,
+        duration: 200,
         useNativeDriver: false,
       }).start(),
     [paddingBottomAnim],
