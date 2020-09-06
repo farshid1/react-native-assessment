@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Text as RNText, TextProps} from 'react-native';
-import {TextStyles} from 'core-ui/styles/textStyles';
+import {TextStyles} from '../styles';
 
 export const Text: FC<TextProps> = ({style, ...props}) => (
   <RNText

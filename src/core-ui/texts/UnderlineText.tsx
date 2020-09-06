@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {TextProps} from 'react-native';
-import {TextStyles} from 'core-ui/styles/textStyles';
+import {TextStyles} from '../styles';
 import {Text} from './Text';
 
 export const UnderlineText: FC<TextProps> = ({style, ...props}) => (
