@@ -1,0 +1,33 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "@react-native-community",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "no-duplicate-imports": 1,
+    "no-console": 1,
+    "react-native/no-unused-styles": 2,
+    "react/prop-types": [0],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    // This disables the check for variables defined in upper scopes, handling styles defined at the end of file.
+    "@typescript-eslint/no-use-before-define": ["error", { "variables": false }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "__DEV__": "readonly"
+  }
+}
