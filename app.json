@@ -1,0 +1,12 @@
+{
+  "name": "react-native-assessment",
+  "displayName": "react-native-assessment",
+  "expo": {
+    "name": "react-native-assessment",
+    "slug": "react-native-assessment",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
