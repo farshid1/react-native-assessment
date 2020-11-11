@@ -1,0 +1,55 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "expo": "~38.0.9",
+    "expo-splash-screen": "^0.5.0",
+    "expo-status-bar": "^1.0.0",
+    "expo-updates": "~0.2.8",
+    "formik": "^2.1.5",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-native": "~0.62.2",
+    "react-native-elements": "^2.3.2",
+    "react-native-gesture-handler": "~1.6.0",
+    "react-native-reanimated": "~1.9.0",
+    "react-native-safe-area-context": "^3.1.7",
+    "react-native-screens": "~2.9.0",
+    "react-native-unimodules": "~0.10.0",
+    "react-native-vector-icons": "^7.1.0",
+    "react-native-web": "~0.11.7",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "@types/react": "~16.9.23",
+    "@types/react-dom": "~16.9.8",
+    "@types/react-native": "~0.61.23",
+    "@types/yup": "^0.29.7",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "babel-preset-expo": "~8.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-react-native": "^3.9.1",
+    "jest-expo": "~38.0.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "private": true
+}
