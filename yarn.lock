@@ -5217,6 +5217,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-keyboard-aware-scrollview@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scrollview/-/react-native-keyboard-aware-scrollview-2.1.0.tgz#418a6b868f4cf2f9d28e77914f11ecbf8ae8e556"
+  integrity sha512-XfWozWFPhdecfxN+wuqERX3mCGDrAim5siC6TWg3Qw7wK/zlwIwe1UIsHDNOQCzf9oIh0SkZXvoOFsMrnyIVmQ==
+
 react-native-safe-area-context@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz#06113c6b208f982d68ab5c3cebd199ca93db6941"
