@@ -29,6 +29,19 @@ export const Login = () => {
         )
     }
 
+    const renderSocialLoginButton = (text: string, icon: any, color?: string) => {
+        return (
+            <TouchableOpacity style={styles.socialLoginButton}>
+                <Ionicons
+                    name={icon}
+                    size={24}
+                    color={color}
+                    style={styles.sociaLoginIcon} />
+                <Text>{text}</Text>
+            </TouchableOpacity>
+        )
+    }
+
     const buttonEnabled = username.length > 3 && password.length > 8
 
     return (
@@ -38,22 +51,8 @@ export const Login = () => {
                     {renderTextInput(InputType.username)}
                     {renderTextInput(InputType.password)}
                     <View style={styles.socialLoginContainer}>
-                        <TouchableOpacity style={styles.socialLoginButton}>
-                            <Ionicons
-                                name="logo-apple"
-                                size={24}
-                                style={styles.sociaLoginIcon} />
-                            <Text>Signup With Apple</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.socialLoginButton}>
-                            <Ionicons
-                                name="ios-logo-facebook"
-                                size={24}
-                                color='blue'
-                                style={styles.sociaLoginIcon} />
-                            <Text>Signup With Facebook</Text>
-                        </TouchableOpacity>
-
+                        {renderSocialLoginButton('Signup With Apple', 'logo-apple')}
+                        {renderSocialLoginButton('Signup With Facebook', 'ios-logo-facebook', 'blue')}
                         <Text style={styles.disclaimer}>By creating an account, you are indicating that you agree to the <Text style={[styles.disclaimer, styles.disclaimerLink]} onPress={() => Linking.openURL('https://www.google.com')}>Terms of use</Text> and that you are over the age of 13.</Text>
 
                         <TouchableOpacity
@@ -76,13 +75,13 @@ const styles = StyleSheet.create({
         flex: 1
     },
     keyboardAwareContainer: {
-        flex: 1, 
-        flexDirection: 'row', 
+        flex: 1,
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
     },
     scrollView: {
-        justifyContent: 'center', 
+        justifyContent: 'center',
         margin: 30
     },
     container: {
