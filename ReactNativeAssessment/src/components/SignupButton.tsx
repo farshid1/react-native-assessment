@@ -1,21 +1,44 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableOpacityProps,
+  View,
+} from 'react-native';
 
-import { styles } from '../utils/styles';
-
-interface ISignUpButton {
+const styles = StyleSheet.create({
+  signUpButton: {
+    flexDirection: 'row',
+    borderColor: '#343434',
+    borderWidth: 1,
+    borderRadius: 100,
+    width: 250,
+    padding: 10,
+    paddingHorizontal: 18,
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  buttonText: {
+    fontSize: 18,
+    color: '#343434',
+  },
+});
+interface ISignUpButton extends TouchableOpacityProps {
   text: string;
   img: React.ReactNode;
-  //   styles?: StyleProp<ViewStyle>;
 }
 
-export default function SignUpButton({ img: Img, text }: ISignUpButton) {
+export default function SignUpButton({
+  img: Img,
+  text,
+  ...rest
+}: ISignUpButton) {
   return (
-    <TouchableOpacity style={[styles.signUpButton]}>
+    <TouchableOpacity style={[styles.signUpButton]} {...rest}>
       <View style={{ marginRight: 8 }}>{Img}</View>
 
-      {/* eslint-disable-next-line react-native/no-inline-styles */}
-      <Text style={{ fontSize: 18, color: '#343434' }}>{text}</Text>
+      <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );
 }

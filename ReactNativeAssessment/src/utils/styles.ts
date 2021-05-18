@@ -2,30 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const colors = {
   placeholderText: '#707070',
+  appBackground: '#fcfcfc',
 };
 
-const styles = StyleSheet.create({
-  textInput: {
-    fontSize: 16,
-    borderBottomColor: '#E8E8E8',
-    borderBottomWidth: 2,
-    paddingLeft: 8,
-
-    height: 64,
-  },
-  signUpButton: {
-    flexDirection: 'row',
-    borderColor: '#343434',
-    borderWidth: 1,
-    borderRadius: 100,
-    width: 250,
-    padding: 10,
-    paddingHorizontal: 18,
-
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-
+const globalStyles = StyleSheet.create({
   shadow: {
     shadowColor: '#000000',
     shadowOffset: {
@@ -39,4 +19,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { styles, colors };
+export { globalStyles, colors };

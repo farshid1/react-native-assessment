@@ -8,7 +8,7 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
-  TouchableOpacity,
+  StyleSheet,
 } from 'react-native';
 import { AppTextInput } from '../components/AppTextInput';
 import AppleSvg from '../assets/icons/apple.svg';
@@ -16,9 +16,46 @@ import FacebookSvg from '../assets/icons/facebook.svg';
 
 import SignUpButton from '../components/SignupButton';
 import { TermsText } from '../components/TermsText';
-import { styles } from '../utils/styles';
+import { colors } from '../utils/styles';
 import { useFormik } from 'formik';
 import { loginSchema } from '../utils/validators';
+import SignInButton from '../components/SignInButton';
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: colors.appBackground,
+  },
+  scrollView: {
+    flex: 1,
+    backgroundColor: colors.appBackground,
+  },
+  contentContainer: {
+    display: 'flex',
+    padding: 36,
+    paddingBottom: 64,
+  },
+  innerContainer: {
+    width: 180,
+    height: 120,
+    marginBottom: 100,
+    backgroundColor: 'white',
+    alignSelf: 'center',
+  },
+
+  cancelText: {
+    marginTop: 30,
+    color: 'gray',
+    textDecorationLine: 'underline',
+    textAlign: 'center',
+    fontSize: 18,
+  },
+  nextButtonContainer: {
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: 22,
+  },
+});
 
 export function LoginScreen() {
   const formik = useFormik({
@@ -32,7 +69,7 @@ export function LoginScreen() {
     validationSchema: loginSchema,
   });
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fcfcfc' }}>
+    <SafeAreaView style={styles.root}>
       <StatusBar barStyle="dark-content" />
 
       <KeyboardAvoidingView
@@ -40,26 +77,15 @@ export function LoginScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={{ flex: 1 }}>
         <ScrollView
-          style={{ flex: 1, backgroundColor: '#fcfcfc' }}
-          contentContainerStyle={{
-            display: 'flex',
-
-            padding: 36,
-            paddingBottom: 64,
-          }}>
-          <View
-            style={{
-              width: 180,
-              height: 120,
-              marginBottom: 100,
-              backgroundColor: 'white',
-              alignSelf: 'center',
-            }}
-          />
+          style={styles.scrollView}
+          contentContainerStyle={styles.contentContainer}>
+          <View style={styles.innerContainer} />
 
           {/* text inputs */}
           <View style={{ marginBottom: 37 }}>
             <AppTextInput
+              autoCorrect={false}
+              autoCompleteType={'off'}
               placeholder="Email"
               value={formik.values.email}
               onChangeText={formik.handleChange('email')}
@@ -94,49 +120,16 @@ export function LoginScreen() {
           <TermsText />
         </ScrollView>
         <View
-          pointerEvents="box-none"
           style={{
             marginBottom: 32,
           }}>
-          <KeyboardAvoidingView
-            behavior="position"
-            style={{
-              justifyContent: 'center',
-              flexDirection: 'row',
-              marginTop: 22,
-            }}>
-            <TouchableOpacity
+          <View style={styles.nextButtonContainer}>
+            <SignInButton
+              text="Next"
               disabled={!(formik.isValid && formik.dirty)}
-              style={[
-                {
-                  backgroundColor: !(formik.isValid && formik.dirty)
-                    ? '#d5d5d5'
-                    : '#0095ff',
-                  justifyContent: 'center',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  borderRadius: 100,
-                  width: 280,
-                  height: 67,
-                },
-                styles.shadow,
-              ]}>
-              <Text
-                style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>
-                Next
-              </Text>
-            </TouchableOpacity>
-          </KeyboardAvoidingView>
-          <Text
-            style={{
-              marginTop: 30,
-              color: 'gray',
-              textDecorationLine: 'underline',
-              textAlign: 'center',
-              fontSize: 18,
-            }}>
-            Cancel
-          </Text>
+            />
+          </View>
+          <Text style={styles.cancelText}>Cancel</Text>
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
