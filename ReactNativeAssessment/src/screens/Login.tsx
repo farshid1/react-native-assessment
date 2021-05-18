@@ -7,7 +7,6 @@ import {
   SafeAreaView,
   ScrollView,
   KeyboardAvoidingView,
-  TextInput,
   Platform,
   TouchableOpacity,
 } from 'react-native';
@@ -18,19 +17,29 @@ import FacebookSvg from '../assets/icons/facebook.svg';
 import SignUpButton from '../components/SignupButton';
 import { TermsText } from '../components/TermsText';
 import { styles } from '../utils/styles';
+import { useFormik } from 'formik';
+import { loginSchema } from '../utils/validators';
 
 export function LoginScreen() {
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    onSubmit(val) {
+      console.log(val);
+    },
+    validationSchema: loginSchema,
+  });
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fcfcfc' }}>
       <StatusBar barStyle="dark-content" />
 
       <KeyboardAvoidingView
-        onMoveShouldSetResponderCapture={() => false}
+        keyboardVerticalOffset={-64}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={{ flex: 1 }}>
         <ScrollView
-          //   invertStickyHeaders={true}
-          //   stickyHeaderIndices={[4]}
           style={{ flex: 1, backgroundColor: '#fcfcfc' }}
           contentContainerStyle={{
             display: 'flex',
@@ -50,14 +59,30 @@ export function LoginScreen() {
 
           {/* text inputs */}
           <View style={{ marginBottom: 37 }}>
-            <AppTextInput placeholder="Email" />
-            <AppTextInput placeholder="Password" isSecureTextEntry />
+            <AppTextInput
+              placeholder="Email"
+              value={formik.values.email}
+              onChangeText={formik.handleChange('email')}
+            />
+            <AppTextInput
+              placeholder="Password"
+              isSecureTextEntry
+              value={formik.values.password}
+              onChangeText={formik.handleChange('password')}
+            />
           </View>
 
           {/* signup button */}
           <View style={{ alignItems: 'center' }}>
             <SignUpButton
-              img={<AppleSvg fill="black" width={20} height={20} />}
+              img={
+                <AppleSvg
+                  fill="black"
+                  width={20}
+                  height={20}
+                  style={{ marginRight: 12 }}
+                />
+              }
               text="Sign up with Apple"
             />
             <SignUpButton
@@ -67,9 +92,13 @@ export function LoginScreen() {
           </View>
 
           <TermsText />
-
+        </ScrollView>
+        <View
+          pointerEvents="box-none"
+          style={{
+            marginBottom: 32,
+          }}>
           <KeyboardAvoidingView
-            keyboardVerticalOffset={64}
             behavior="position"
             style={{
               justifyContent: 'center',
@@ -77,10 +106,12 @@ export function LoginScreen() {
               marginTop: 22,
             }}>
             <TouchableOpacity
-              disabled={true}
+              disabled={!(formik.isValid && formik.dirty)}
               style={[
                 {
-                  backgroundColor: '#d5d5d5',
+                  backgroundColor: !(formik.isValid && formik.dirty)
+                    ? '#d5d5d5'
+                    : '#0095ff',
                   justifyContent: 'center',
                   flexDirection: 'row',
                   alignItems: 'center',
@@ -96,7 +127,6 @@ export function LoginScreen() {
               </Text>
             </TouchableOpacity>
           </KeyboardAvoidingView>
-
           <Text
             style={{
               marginTop: 30,
@@ -107,9 +137,7 @@ export function LoginScreen() {
             }}>
             Cancel
           </Text>
-
-          <TextInput />
-        </ScrollView>
+        </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
