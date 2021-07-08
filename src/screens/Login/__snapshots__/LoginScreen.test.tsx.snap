@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginScreen /> should match snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "flexGrow": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+            },
+            Object {
+              "justifyContent": "center",
+            },
+            Object {
+              "marginTop": 255.02941176470588,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "justifyContent": "space-between",
+              },
+              Object {
+                "height": 182.14285714285714,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "borderBottomWidth": 2.142857142857143,
+                  "borderColor": "#d5d5d5",
+                  "padding": 34.285714285714285,
+                },
+                Object {
+                  "width": 637.5,
+                },
+              ]
+            }
+          >
+            <TextInput
+              accessibilityLabel="Email input"
+              accessible={true}
+              allowFontScaling={true}
+              autoCapitalize="none"
+              keyboardType="email-address"
+              onChangeText={[Function]}
+              placeholder="Email"
+              placeholderTextColor="#7f7f7f"
+              rejectResponderTermination={true}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 34.285714285714285,
+                  },
+                  undefined,
+                ]
+              }
+              textContentType="emailAddress"
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderBottomWidth": 2.142857142857143,
+                  "borderColor": "#d5d5d5",
+                  "padding": 34.285714285714285,
+                },
+                Object {
+                  "width": 637.5,
+                },
+              ]
+            }
+          >
+            <TextInput
+              accessibilityLabel="Password input"
+              accessible={true}
+              allowFontScaling={true}
+              autoCapitalize="none"
+              onChangeText={[Function]}
+              placeholder="Password"
+              placeholderTextColor="#7f7f7f"
+              rejectResponderTermination={true}
+              secureTextEntry={true}
+              style={
+                Array [
+                  Object {
+                    "fontSize": 34.285714285714285,
+                  },
+                  undefined,
+                ]
+              }
+              textContentType="password"
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+              },
+              Object {
+                "marginBottom": 78.47058823529412,
+                "marginTop": 98.08823529411764,
+              },
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Sign up with Apple"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "borderColor": "#424242",
+                "borderRadius": 85.71428571428571,
+                "borderWidth": 2.142857142857143,
+                "opacity": 1,
+                "padding": 21.428571428571427,
+                "width": 482.1428571428571,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                  Object {
+                    "alignItems": "center",
+                  },
+                ]
+              }
+            >
+              <Image
+                resizeMode="contain"
+                source={
+                  Object {
+                    "testUri": "../../../src/assets/images/apple.png",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 53.57142857142857,
+                      "width": 53.57142857142857,
+                    },
+                    Object {
+                      "marginRight": 25.714285714285715,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 34.285714285714285,
+                    },
+                    Object {
+                      "color": "#424242",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Sign up with Apple
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginVertical": 8.571428571428571,
+              }
+            }
+          />
+          <View
+            accessibilityLabel="Sign up with Facebook"
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "borderColor": "#424242",
+                "borderRadius": 85.71428571428571,
+                "borderWidth": 2.142857142857143,
+                "opacity": 1,
+                "padding": 21.428571428571427,
+                "width": 482.1428571428571,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                  Object {
+                    "alignItems": "center",
+                  },
+                ]
+              }
+            >
+              <Image
+                resizeMode="contain"
+                source={
+                  Object {
+                    "testUri": "../../../src/assets/images/facebook.png",
+                  }
+                }
+                style={
+                  Array [
+                    Object {
+                      "height": 53.57142857142857,
+                      "width": 53.57142857142857,
+                    },
+                    Object {
+                      "marginRight": 25.714285714285715,
+                    },
+                  ]
+                }
+              />
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 34.285714285714285,
+                    },
+                    Object {
+                      "color": "#424242",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Sign up with Facebook
+              </Text>
+            </View>
+          </View>
+        </View>
+        <Text
+          accessibilityLabel="Disclaimer"
+          accessible={true}
+          style={
+            Array [
+              Object {
+                "fontSize": 34.285714285714285,
+              },
+              Object {
+                "color": "#424242",
+              },
+              Array [
+                Object {
+                  "fontSize": 21.428571428571427,
+                },
+                Array [
+                  Object {
+                    "color": "#7f7f7f",
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "width": 637.5,
+                  },
+                ],
+              ],
+            ]
+          }
+        >
+          By creating an account, you are indicating that you agree to the
+           
+          <Text
+            accessibilityLabel="Terms of Use"
+            accessible={true}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "fontSize": 34.285714285714285,
+                },
+                Object {
+                  "color": "#424242",
+                },
+                Array [
+                  Object {
+                    "fontSize": 21.428571428571427,
+                  },
+                  Array [
+                    Object {
+                      "textDecorationLine": "underline",
+                    },
+                    Object {
+                      "color": "#7f7f7f",
+                    },
+                  ],
+                ],
+              ]
+            }
+          >
+            Terms of Use
+          </Text>
+           
+          and that you are over the age of 13.
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "bottom": 78.47058823529412,
+        "height": 156.94117647058823,
+        "justifyContent": "space-between",
+        "paddingBottom": 0,
+        "paddingVertical": 12.857142857142858,
+        "position": "absolute",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Next"
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#d5d5d5",
+          "borderRadius": 64.28571428571428,
+          "elevation": 20,
+          "height": 107.14285714285714,
+          "justifyContent": "center",
+          "opacity": 1,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 9,
+          "width": 450,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 38.57142857142857,
+            },
+            Object {
+              "fontWeight": "700",
+            },
+            Object {
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Next
+      </Text>
+    </View>
+    <Text
+      accessibilityLabel="Cancel"
+      accessible={true}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "fontSize": 34.285714285714285,
+          },
+          Object {
+            "color": "#424242",
+          },
+          Array [
+            Object {
+              "textDecorationLine": "underline",
+            },
+            Array [
+              Object {
+                "color": "#7f7f7f",
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ],
+          ],
+        ]
+      }
+    >
+      Cancel
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
